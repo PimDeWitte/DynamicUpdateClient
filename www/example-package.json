@@ -1,22 +1,22 @@
 [
     {
         "version" : "0.0.0",
-        "src" : "http://localhost:8080/example-package-0.0.0.zip"
+        "src" : "http://localhost/example-package-0.0.0.zip"
     },
     {
         "version" : "0.0.1",
-        "src" : "http://localhost:8080/example-package-0.0.1.zip"
+        "src" : "http://localhost/example-package-0.0.1.zip"
     },
     {
         "version" : "0.0.2",
-        "src" : "http://localhost:8080/example-package-0.0.2.zip"
+        "src" : "http://localhost/example-package-0.0.2.zip"
     },
     {
         "version" : "0.0.3",
-        "src" : "http://localhost:8080/example-package-0.0.3.zip"
+        "src" : "http://localhost/example-package-0.0.3.zip"
     },
     {
         "version" : "0.0.4",
-        "src" : "http://localhost:8080/example-package-0.0.4.zip"
+        "src" : "http://localhost/example-package-0.0.4.zip"
     }
 ]
