@@ -32,13 +32,13 @@ It will then locally retrieve the currently installed version of that module. We
 
 It will then iterate over the versions that the web repository is showing, until it finds our local version. If any other versions are found, the update client will download and execute these updates in the order they are shown in the index file.
 
-For each following item in the list, starting from the next position:
+For each version that was found in the remote index file that came after our local version, we will execute the following tasks:
 
 Ensure this package should not be ignored (It will be ignored if it has returned 1 in the past, so that you can release a new package to update the system without it getting stuck)
 
 Download the package
 
-Install the package
+Install the package 
 
 Execute the update.sh script with three parameters, the from_version, the version it is updating to (to_version) and the number of times the update has been retried.
 
