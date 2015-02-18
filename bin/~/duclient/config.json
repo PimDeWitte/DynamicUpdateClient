@@ -1,0 +1,6 @@
+{
+    "update_server_url" : "packages.local:80",
+    "modules" : [
+        "example-package"
+    ]
+}

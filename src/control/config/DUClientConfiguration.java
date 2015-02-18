@@ -15,9 +15,9 @@ public class DUClientConfiguration {
 
     private static Config config;
 
-    private static final String WORKSPACE = "~/duclient";
+    private static final String WORKSPACE = "~/duclient/";
     private static final String CONFIG_PATH = WORKSPACE + "config.json";
-    private static final String CRONTAB_PATH = WORKSPACE + "duclient.sh";
+    private static final String CRONTAB_PATH = WORKSPACE + "run.sh";
 
     public static final String getWorkspace() {
         return WORKSPACE;
@@ -26,7 +26,8 @@ public class DUClientConfiguration {
     public static final String getConfigurationPath() {
         return CONFIG_PATH;
     }
- public static final String getCrontabPath() {
+
+    public static final String getCrontabPath() {
         return CRONTAB_PATH;
     }
 
