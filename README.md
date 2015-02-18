@@ -20,7 +20,9 @@ In the bin folder, run the following:
     ./duclient.sh --config
 ```
 
-Duclient will now be installed in the versions directory in bin.
+You will now be prompted with the configuration where you can enter the Dynamic update host, port, and the user that will run the updates.
+
+After you're done, these settings will be written to a cron job and a configuration file. You can re-run this configuration at any time to add or remove modules.
  
 You can edit the modules on your system by editing the bin/versions/config.json file. This makes it extremely easy to add or stop packages in your system.
 
