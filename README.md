@@ -50,7 +50,7 @@ When the exit code is 2, the update was not successful but should be attempted a
 
 
 
-##Contents
+##Remote Package Contents
 Each shell package must at least contain an update.sh shell script. This shell script will be executed by the update client after extraction and is responsible for the update process.
 
 Packages must follow a particular naming convention. The filename is comprised of the module name (e.g. example-package), followed by a dash (-) and the version label (e.g. 1.0.0). The version label must follow the semantic version pattern int + ‘.’ + int + ‘.’ + int or int + ‘.’ + int. Some examples are: example-package-0.0.1. 
