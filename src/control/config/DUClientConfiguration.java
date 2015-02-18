@@ -15,7 +15,7 @@ public class DUClientConfiguration {
 
     private static Config config;
 
-    private static final String WORKSPACE = "~/duclient/";
+    private static final String WORKSPACE = "versions/";
     private static final String CONFIG_PATH = WORKSPACE + "config.json";
     private static final String CRONTAB_PATH = WORKSPACE + "run.sh";
 
