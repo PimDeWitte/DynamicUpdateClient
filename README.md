@@ -30,11 +30,11 @@ First, the update client retrieves the latest index file form the web repository
 
 It will then locally retrieve the currently installed version of that module. We will refer to this as from_version
 
-It will then iterate over the versions that the web repository is showing, until it finds our from_version. If any versions come after that, the update client will download and execute these updates.
+It will then iterate over the versions that the web repository is showing, until it finds our local version. If any other versions are found, the update client will download and execute these updates in the order they are shown in the index file.
 
 For each following item in the list, starting from the next position:
 
-Ensure this package should not be ignored
+Ensure this package should not be ignored (It will be ignored if it has returned 1 in the past, so that you can release a new package to update the system without it getting stuck)
 
 Download the package
 
@@ -44,7 +44,7 @@ Execute the update.sh script with three parameters, the from_version, the versio
 
 When the exit code is 0, the update was successful and the from_version  value should be updated.
 
-When the exit code is 1, the update was not successful and this package should be ignored in the future
+When the exit code is 1, the update was not successful and this package should be ignored in the future. As a security, the maximum amount of times an update can fail is 4 times.
 
 When the exit code is 2, the update was not successful but should be attempted again in X minutes. The update client must first do that before continuing with the next update.
 
