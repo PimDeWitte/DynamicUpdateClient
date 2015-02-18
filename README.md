@@ -1,12 +1,11 @@
 DynamicUpdateClient
 ===================
 
-The dynamic update client is an update client that simply executes an update from a web server. It stores a local JSON file with all the packages that are on the current system,
-and pulls updates from a given webserver in a certain way to see if updates have come available. It's a simply solution to update lots of systems at once running the same software. 
-The DynamicUpdateclient uses cron to schedule recurring tasks. 
+The dynamic update client is a simple but useful update client for linux that watches local versions and remote versions and updates the local system if new updates come available automatically. It uses cron to schedule logic.
 
+The update client is placed on all devices that run modules which could be updated. The client is responsible for selecting, downloading and triggering updates.
 
-Running the Dynamic Update Client:
+##Running the Dynamic Update Client:
 
 Place the contents of the www folder on any web server.
 
@@ -25,17 +24,13 @@ Duclient will now be installed in the versions directory in bin.
  
 You can edit the modules on your system by editing the bin/versions/config.json file. This makes it extremely easy to add or stop packages in your system.
 
-##Update Client
-The update client is placed on all devices that run modules which could be updated. The client is responsible for selecting, downloading and triggering updates.
+###How does it work?
 
-###What does it do? 
-The following steps must be taken at a specific interval:
+First, the update client retrieves the latest index file form the web repository listed in bin/versions/config.json. 
 
-Retrieve the latest index file for each module as listed in the index file
+It will then locally retrieve the currently installed version of that module. We will refer to this as from_version
 
-Locally retrieve the currently installed version of that module. We will refer to this as from_version
-
-Iterate through the list of packages until the from_version is found in the list
+It will then iterate over the versions that the web repository is showing, until it finds our <from_version>. If any versions come after that, the update client will download and execute these updates.
 
 For each following item in the list, starting from the next position:
 
@@ -51,7 +46,7 @@ When the exit code is 0, the update was successful and the from_version  value s
 
 When the exit code is 1, the update was not successful and this package should be ignored in the future
 
-When the exit code is 2, the update was not successful but should be attempted again in five minutes. The update client must first do that before continuing with the next update.
+When the exit code is 2, the update was not successful but should be attempted again in X minutes. The update client must first do that before continuing with the next update.
 
 
 
@@ -70,6 +65,7 @@ The update script will be executed as follows:
 <to_version> is the version that the update script is expected to install
 <retry_count> is the number of times the script was retried, starting at 0
 ```
+
 The update script has three main responsibilities:
 Only start an update if it was explicitly designed to be able to update from_version to to_version
 If midway an update it cannot continue, it must revert the changes it has made to that point.
