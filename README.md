@@ -1,6 +1,11 @@
 DynamicUpdateClient
 ===================
 
+The dynamic update client is an update client that simply executes an update from a web server. It stores a local JSON file with all the packages that are on the current system,
+and pulls updates from a given webserver in a certain way to see if updates have come available. It's a simply solution to update lots of systems at once running the same software. 
+The DynamicUpdateclient uses cron to schedule recurring tasks. 
+
+
 Running the Dynamic Update Client:
 
 Place the contents of the www folder on any web server.
@@ -16,7 +21,9 @@ In the bin folder, run the following:
     ./duclient.sh --config
 ```
 
-Duclient will now be installed in the versions directory in bin. Happy updating!
+Duclient will now be installed in the versions directory in bin.
+ 
+You can edit the modules on your system by editing the bin/versions/config.json file. This makes it extremely easy to add or stop packages in your system.
 
 ##Update Client
 The update client is placed on all devices that run modules which could be updated. The client is responsible for selecting, downloading and triggering updates.
@@ -55,12 +62,14 @@ Packages must follow a particular naming convention. The filename is comprised o
 
 Each package has to contain an update.sh shell script
 The update script will be executed as follows:
+
+```
 /bin/bash update.sh <from_version> <to_version> <retry_count>
 
 <from_version> is the currently installed version
 <to_version> is the version that the update script is expected to install
 <retry_count> is the number of times the script was retried, starting at 0
-
+```
 The update script has three main responsibilities:
 Only start an update if it was explicitly designed to be able to update from_version to to_version
 If midway an update it cannot continue, it must revert the changes it has made to that point.
