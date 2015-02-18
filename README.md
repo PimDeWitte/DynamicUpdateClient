@@ -23,17 +23,27 @@ The update client is placed on all devices that run modules which could be updat
 
 ###What does it do? 
 The following steps must be taken at a specific interval:
-Retrieve the latest index file for each module
-curl http://packages.local/OpenMRS-module.json
+
+Retrieve the latest index file for each module as listed in the index file
+
 Locally retrieve the currently installed version of that module. We will refer to this as from_version
+
 Iterate through the list of packages until the from_version is found in the list
+
 For each following item in the list, starting from the next position:
+
 Ensure this package should not be ignored
+
 Download the package
+
 Install the package
+
 Execute the update.sh script with three parameters, the from_version, the version it is updating to (to_version) and the number of times the update has been retried.
+
 When the exit code is 0, the update was successful and the from_version  value should be updated.
+
 When the exit code is 1, the update was not successful and this package should be ignored in the future
+
 When the exit code is 2, the update was not successful but should be attempted again in five minutes. The update client must first do that before continuing with the next update.
 
 
