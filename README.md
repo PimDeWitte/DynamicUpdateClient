@@ -92,3 +92,6 @@ An index file has to be placed in the server repository root. It must have the e
 ]
 ```
 The index file is served by a web repository using an HTTP web server. The location of the index file follows the following pattern SERVER_URL + ‘/’ + MODULE_NAME + ‘.json’. For example: http://packages.local/example-package.json
+
+##What's left to be done?
+While I am no longer actively developing this project, I'd like to include authentication and file checksum checks at some point. If you're going to use this system, please do so.
