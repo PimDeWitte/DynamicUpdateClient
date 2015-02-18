@@ -30,7 +30,7 @@ First, the update client retrieves the latest index file form the web repository
 
 It will then locally retrieve the currently installed version of that module. We will refer to this as from_version
 
-It will then iterate over the versions that the web repository is showing, until it finds our <from_version>. If any versions come after that, the update client will download and execute these updates.
+It will then iterate over the versions that the web repository is showing, until it finds our from_version. If any versions come after that, the update client will download and execute these updates.
 
 For each following item in the list, starting from the next position:
 
