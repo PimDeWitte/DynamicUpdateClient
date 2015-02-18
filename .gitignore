@@ -1,0 +1,10 @@
+*.class
+*.pyc
+.DS_Store
+errors
+out/*
+*.iml
+.idea/*
+tmp.*
+www/*
+workspace/*
