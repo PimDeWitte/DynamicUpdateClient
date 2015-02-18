@@ -10,6 +10,6 @@ This branch contains a working version of the update client. You can test it you
     ./duclient.sh --config
 ```
 
-3. Duclient will be installed in the home directory for the user that runs the script and start running using cron.
+Duclient will now be installed in the versions directory in bin. Happy updating!
 
 You're done!
