@@ -1,0 +1,2 @@
+These are some test files that you can run in order to test the system. Put them on a simple apache/nginx server and run
+the duclient, maybe you can even try to add a package and new versions of that package. 

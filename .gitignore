@@ -6,5 +6,4 @@ out/*
 *.iml
 .idea/*
 tmp.*
-www/*
 workspace/*
