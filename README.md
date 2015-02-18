@@ -1,9 +1,9 @@
 DynamicUpdateClient
 ===================
 
-The dynamic update client is a simple but useful update client for linux that watches local versions and remote versions and updates the local system if new updates come available automatically. It uses cron to schedule logic.
+The dynamic update client is a simple, lightweight but useful update client for linux that watches local versions and remote versions and updates the local system if new updates come available automatically. It uses cron to schedule logic.
 
-The update client is placed on all devices that run modules which could be updated. The client is responsible for selecting, downloading and triggering updates.
+The update client is placed on all devices that run modules which could be updated. The client is responsible for selecting, downloading and triggering updates. It was designed to run on the Intel Edison in order to update systems in places without internet, but it can be adapted more widely. 
 
 ###Running the Dynamic Update Client:
 
