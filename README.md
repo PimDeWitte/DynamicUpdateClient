@@ -5,9 +5,9 @@ The dynamic update client is a simple but useful update client for linux that wa
 
 The update client is placed on all devices that run modules which could be updated. The client is responsible for selecting, downloading and triggering updates.
 
-##Running the Dynamic Update Client:
+###Running the Dynamic Update Client:
 
-Place the contents of the www folder on any web server.
+If you'd like to test it's functionality, simply place the contents of the www folder on any web server.
 
 In the root folder, build the project by running the build script
 
