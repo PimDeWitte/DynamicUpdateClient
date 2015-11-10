@@ -97,9 +97,5 @@ An index file has to be placed in the server repository root. It must have the e
 ```
 The index file is served by a web repository using an HTTP web server. The location of the index file follows the following pattern SERVER_URL + ‘/’ + MODULE_NAME + ‘.json’. For example: http://packages.local/example-package.json
 
-##What's left to be done?
-While I am no longer actively developing this project, I'd like to include authentication and file checksum checks at some point. If you're going to use this system, please do so. I'd also like to support windows at some point. Currently, if you'd like to use this on windows, you'd have to replace the linux commands in all cases of ShellExecution.executeCommand. Simply search for references of this call and you will find all the commands you need to modify. You'd obviously also need to write the update script for windows!
-
-Thank you,
-
-Pim
+##Questions?
+Email pim (at) [name of this company without inc] dot com or tweet me at @PimDeWitte
